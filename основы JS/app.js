@@ -19,8 +19,6 @@ let example2 = 10 + "10" + 10;
 let example3 = 10 + 10 + +"10";
 let example4 = 10 / -"";
 let example5 = 10 / +"2,5";
-let example6 = '';
-console.log(example6);
 
 console.log(example1);
 /*Приоритеты у всех действий одинаковые, счтитывание идет с лева на право.
