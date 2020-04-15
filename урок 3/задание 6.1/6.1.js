@@ -8,9 +8,11 @@ function pyramid() {
 
 	for( let i = 0 ; i < iteration ; i++){
 		rr.push('*');
-		console.log(rr);
+		let ra = rr.join('');
+		console.log(ra);
 	}
 
 };
 
 pyramid();
+
