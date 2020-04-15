@@ -1,0 +1,25 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+h1 {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: 30px;
+   text-align: center;
+   color: chocolate;
+}
+
+p {
+   border: 3px solid #270a0a;
+   border-radius: 5%;
+   text-align: center;
+   margin: auto;
+   width: 500px;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 15px;
+   padding: 20px;
+   -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+   -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+   box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
