@@ -12,35 +12,46 @@ let basketBtns = document.querySelectorAll('.btn');
 basketBtns.forEach(function (ff) {
 	ff.addEventListener('click', function (event) {
 		let id = event.target.dataset.id;
-		let price = event.target.dataset.price;
+		let price =event.target.dataset.price;
 		let name = event.target.dataset.name;
-		let pictures = event.target.dataset.src;
-		basket.addProduct({ id: id, price: price, name: name })
+		let src = event.target.dataset.src;
+		basket.addProduct({ id: id, price: price, name: name, src: src })
 	})
 });
-console.log(addProduct);
-/* let basket = {
+let basket = {
 	products: {},
 
 	
 	
 
-	/addProduct(product){
-		this.addProductToObject(product);
-      this.renderProductInBasket(product);
-	},
+	addProduct(product) {
+		this.renderProductInBasket(product);
+ 	},
 
-	addProductToObject(product){
-		if (this.products[product.id] == undefined) {
-			this.products[product.id] = {
-				 price: product.price,
-				 name: product.name,
-				 count: 1
-			}
-	  } else {
-			this.products[product.id].count++;
-	  }
-	},
+
+	renderProductInBasket(product) {
+		let productExist = document.querySelector(`.productCount[data-id="${product.id}"]`);
+		if (productExist) {
+			 productExist.textContent++;
+			 return;
+		}
+		let productRow = `
+				<div class="cart-list__product">
+					<a href="product.html" class="cart-list__product_image"><img src="${product.src}" alt="tee-shirt"></a>
+						<div class="cart-list__product_data">
+							<a href="product.html"><h3>${product.name}</h3></a>
+								<div class="star-rating">
+									<img src="img/promo/star-rating.png" alt="star-rating">    
+								</div>
+						<span>1 x ${product.price}</span>
+				</div>
+				<input type="image" src="img/promo/arrow_cancel.png" alt="arrow_cancel">
+			</div>
+		`;
+		
+		let tbody = document.querySelector('.cart-list');
+		tbody.insertAdjacentHTML("afterBegin", productRow);
+  },
  
 	 
-}  */
+}  
