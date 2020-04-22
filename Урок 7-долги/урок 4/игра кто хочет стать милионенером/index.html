@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="greating-heling">
+      Приветсвую тебя в игре кто хочет стать милионером!
+    </h1>
+    <section>
+		 <!-- После нажатия старт блоку 'game' присваивается display = 'none' -->
+      <div class="game greating"> 
+        <p class=""greating rules-of-the-game">
+          Правила игры просты.<br />Тебе будет нужно ответить на ряд
+          вопросов.<br />
+          Для каждого вопроста будет дано 4 ответа. Выбери ответ и если он
+          правельный тогда сможешь продолжить игру.<br />
+          Если ответ был не верный тогда игра закончится. Надеюсьты все
+          понял.<br />
+          Тогда начтем игру. Нажми на кнопку "Старт"
+        </p>
+        <label for=""greating plauer-name">Введите ваше имя</label>
+        <input class=" plauer-name" id="plauer-name" type="text" />
+        <input
+          type="button"
+          class="button  button-next"
+          value="Старт"
+		  />
+      </div>
+	 </section>
+	 <section>
+		  <!-- "Этот блок будет добавлятся через js" -->
+        <div class="question">
+			<h3 class="question_heading"> Вопрос № 1</h3>	
+		  <img
+			 src="https://in04.hostcontrol.com/resources/0f90ae29d8c6b4/54758ec63b.PNG"
+			 alt="картинка"
+			 class="guestion_img"
+		  />
+		  <p class="quaere">Сколько будет 2 + 2</p>
+		  <input data-answer="1" type="button" value=" а вам это зачем?" />
+		  <input data-answer="2"  type="button" value=" 4 " />
+		  <br>
+		  <input  data-answer="3" type="button" value="5" />
+		  <input data-answer="4" type="button" value="с поправкой на ветер?" />
+		</div>
+	 </section>
+
+	 <script src="game.js"></script> 
+	 <script src="hideBlock.js"></script>
+	 <script src="question.js"></script>
+  </body>
+</html>
